@@ -1,0 +1,21 @@
+# R Programming Assessment 2 - Sample Run
+## Anirban Dhar
+
+## Testing the code with a sample 2/2 matrix
+```{r}
+source ("cachematrix.R")
+x = rbind(c(1, -1/2), c(-1/2, 1)) 
+m = makeCacheMatrix(x) 
+m$get() 
+```
+## First run with no caching
+```{r}
+cacheSolve(m)
+proc.time() 
+```
+
+## 2nd Run uses caching
+```{r}
+cacheSolve(m) 
+proc.time()
+```
